@@ -1,0 +1,14 @@
+@import 'colors.scss';
+
+div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  margin: 0 20px;
+  p {
+    color: $white;
+    font-size: inherit;
+  }
+}
