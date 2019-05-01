@@ -1,0 +1,28 @@
+<al-form>
+  <al-errors></al-errors>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <al-form-control [control]="registerForm.get('fullName')">
+      <input type="text" placeholder="Full name" formControlName="fullName" />
+    </al-form-control>
+    <al-form-control [control]="registerForm.get('address')">
+      <input type="text" placeholder="Address" formControlName="address" />
+    </al-form-control>
+    <al-form-control [control]="registerForm.get('cp')">
+      <input type="text" placeholder="CP (Codigo Postal)" formControlName="cp" />
+    </al-form-control>
+    <al-form-control [control]="registerForm.get('email')">
+      <input type="email" placeholder="Email" formControlName="email" />
+    </al-form-control>
+    <al-form-control [control]="registerForm.get('password')">
+      <input type="password" placeholder="Password" formControlName="password" />
+    </al-form-control>
+    <al-form-control [control]="registerForm.get('confirmPassword')" [group]="registerForm">
+      <input type="password" placeholder="Confirm password" formControlName="confirmPassword" />
+    </al-form-control>
+    <div class="button-wrapper">
+      <button>
+        Register
+      </button>
+    </div>
+  </form>
+</al-form>

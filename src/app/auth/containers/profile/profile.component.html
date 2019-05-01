@@ -1,0 +1,21 @@
+<al-form>
+  <al-errors></al-errors>
+  <form [formGroup]="updateProfileForm" (ngSubmit)="updateProfile()">
+    <div>
+      <al-form-control [control]="updateProfileForm.get('fullName')">
+        <input type="text" placeholder="Enter your name/ Introduzca su nombre" formControlName="fullName"
+          alNullDefault />
+      </al-form-control>
+      <al-form-control [control]="updateProfileForm.get('address')">
+        <input type="text" placeholder="Enter your address/ Introduzca su dirreccion" formControlName="address"
+          alNullDefault />
+      </al-form-control>
+      <al-form-control [control]="updateProfileForm.get('cp')">
+        <input type="text" placeholder="Enter your PC/ Introduzca su CP" formControlName="cp" alNullDefault />
+      </al-form-control>
+    </div>
+    <div class="button-wrapper">
+      <button type="submit">Update profile</button>
+    </div>
+  </form>
+</al-form>
