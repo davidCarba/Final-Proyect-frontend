@@ -1,0 +1,17 @@
+<div>
+  <ul>
+    <li [class.selected]="isRegisterFormVisible">
+      <a alPreventDefault href="" (click)="toggleForm(true)">Register</a>
+    </li>
+    <li [class.selected]="!isRegisterFormVisible">
+      <a alPreventDefault href="" (click)="toggleForm(false)">Login</a>
+    </li>
+  </ul>
+
+  <div class="register-form" *ngIf="isRegisterFormVisible">
+    <al-register></al-register>
+  </div>
+  <div class="login-form" *ngIf="!isRegisterFormVisible">
+    <al-login></al-login>
+  </div>
+</div>

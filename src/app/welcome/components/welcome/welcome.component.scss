@@ -1,0 +1,27 @@
+@import 'colors.scss';
+@import 'breakpoints.scss';
+
+:host {
+  display: flex;
+  height: 100%;
+  background-color: $white;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  padding: 30px 20px;
+  margin: 0 auto;
+
+  al-welcome-forms {
+    flex: 1;
+  }
+
+  @include respond-above(md) {
+    padding: 2%;
+    flex-direction: row;
+
+    al-welcome-forms {
+      flex-direction: row;
+      max-width: 500px;
+    }
+  }
+}
